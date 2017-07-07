@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/et_toolbar"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/name"
+                    style="@style/LoginText"
+                    android:layout_weight="1"
+                    android:hint="@string/name_hint" />
+
+                <RelativeLayout
+                    android:id="@+id/rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/getcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/tx_right_margin"
+                        android:text="获取验证码"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/division"
+                        android:layout_width="2dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/tx_right_margin"
+                        android:layout_toLeftOf="@id/getcode"
+                        android:background="@color/gray" />
+
+                    <EditText
+                        android:id="@+id/phone_number"
+                        style="@style/LoginText"
+                        android:layout_toLeftOf="@id/division"
+                        android:hint="@string/login_name_phone" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/register_code"
+                    style="@style/LoginText"
+                    android:layout_below="@+id/rl"
+                    android:hint="@string/login_code" />
+
+                <EditText
+                    android:id="@+id/invitation_code"
+                    style="@style/LoginText"
+                    android:layout_below="@+id/rl"
+                    android:hint="@string/invitation_code" />
+
+                <EditText
+                    android:id="@+id/password"
+                    style="@style/LoginText"
+                    android:layout_below="@+id/login_code"
+                    android:hint="@string/login_password"
+                    android:inputType="textPassword" />
+
+
+                <EditText
+                    android:id="@+id/location"
+                    style="@style/LoginText"
+                    android:layout_weight="1"
+                    android:hint="@string/location_hint" />
+
+
+                <EditText
+                    android:id="@+id/remark"
+                    style="@style/LoginText"
+                    android:layout_weight="1"
+                    android:hint="@string/remark_hint" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/register_hint1_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/register_hint1_content"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button"
+                style="@style/LoginButton"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/commit" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

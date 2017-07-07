@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightGray">
+
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:padding="30dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="1525"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:id="@+id/surplus"/>
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/money_white"
+            android:layout_toLeftOf="@id/surplus"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/surplus"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="账户余额"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="5dp"
+        android:text="提现"
+        android:gravity="center"
+        android:padding="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="5dp"
+        android:text="总盈利：12562元"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/red"
+        android:id="@+id/profit"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账单明细"
+            android:padding="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="2017.5.18"
+            android:textSize="10sp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/end_time"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/end_time"
+            android:layout_centerVertical="true"
+            android:text="-"
+            android:layout_marginRight="5dp"
+            android:id="@+id/punctuation"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="2017.5.12"
+            android:textSize="10sp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/start_time"
+            android:layout_toLeftOf="@id/punctuation"/>
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listview" />
+</LinearLayout>

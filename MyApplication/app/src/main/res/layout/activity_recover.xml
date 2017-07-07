@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGray">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="@color/white"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/getcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/tx_right_margin"
+                android:text="获取验证码"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/tx_right_margin"
+                android:layout_toLeftOf="@id/getcode"
+                android:background="@color/gray"
+                android:id="@+id/division"/>
+            <EditText
+                android:id="@+id/login_name_phone"
+                style="@style/LoginText"
+                android:layout_toLeftOf="@id/division"
+                android:hint="@string/login_name_phone" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/login_code"
+            style="@style/LoginText"
+            android:layout_below="@+id/rl"
+            android:hint="@string/login_code" />
+
+        <EditText
+            android:id="@+id/new_password"
+            style="@style/LoginText"
+            android:layout_below="@+id/login_code"
+            android:hint="@string/new_password"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/notarize_password"
+            style="@style/LoginText"
+            android:layout_below="@+id/new_password"
+            android:hint="@string/notarize_password"
+            android:inputType="textPassword" />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/button"
+        style="@style/LoginButton"
+        android:layout_below="@+id/rl1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/et_button"
+        android:text="@string/recover" />
+</RelativeLayout>

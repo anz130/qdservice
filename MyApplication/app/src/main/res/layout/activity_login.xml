@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <EditText
+        android:id="@+id/login_name_phone"
+        style="@style/LoginText"
+        android:hint="@string/login_name_phone" />
+
+    <EditText
+        android:id="@+id/login_password"
+        style="@style/LoginText"
+        android:hint="@string/login_password"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/tv_register_entrance"
+        style="@style/Hint_Details"
+        android:layout_gravity="end"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/register_entrance"
+        android:textColor="@color/orange" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/LoginButton"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/login_button" />
+
+    <TextView
+        android:id="@+id/forget_password"
+        style="@style/Hint_Details"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="@string/forget_password"
+        android:textColor="@color/orange" />
+</LinearLayout>
