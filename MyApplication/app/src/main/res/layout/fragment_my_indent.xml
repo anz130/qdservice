@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/bar">
+
+        <TextView
+            android:id="@+id/total"
+            style="@style/BottomText"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="全部" />
+
+        <TextView
+            android:id="@+id/to_take"
+            style="@style/BottomText"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="待取件" />
+
+        <TextView
+            android:id="@+id/to_sign"
+            style="@style/BottomText"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="未完成" />
+
+        <TextView
+            android:id="@+id/signed"
+            style="@style/BottomText"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:text="已完成" />
+    </LinearLayout>
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/bar">
+
+        <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listview"/>
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
+    <TextView
+        android:id="@+id/tv_load_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/load_more_error"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_load_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="@string/load_more_empty"
+        android:textSize="20sp"
+        android:visibility="gone" />
+</RelativeLayout>

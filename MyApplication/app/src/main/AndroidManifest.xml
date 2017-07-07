@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.paopao.roblistapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    //百度地图
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:name=".PaoPaoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_face"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        tools:replace="android:icon">
+        <activity android:name=".main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".me.register.RecoverActivity" />
+        <activity android:name=".me.register.RegisterActivity" />
+        <activity android:name=".main.mine.person.PartnerActivity" />
+        <activity android:name=".main.mine.SetActivity" />
+        <activity android:name=".main.mine.set.SuggestionsActivity" />
+        <activity android:name=".main.mine.PersonActivity"/>
+        <activity android:name=".main.mine.person.NickNameActivity"/>
+        <activity android:name=".main.mine.set.AboutUsActivity"/>
+        <activity android:name=".main.mine.wallet.WalletActivity"/>
+        <activity android:name=".main.mine.person.AuthenticationActivity"/>
+        <activity android:name=".main.indent.IndentItemActivity"/>
+        <activity android:name=".map.MyMap"/>
+
+        //百度地图
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="sxyNZrYg1MUVZlxYLk2R3lGNmSdxfXkp" />
+    </application>
+
+
+</manifest>
